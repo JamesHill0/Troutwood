@@ -12,11 +12,9 @@ var questions = [
     {prompt:"10) Who can invest?", answer:2, choices:["a)  Only companies with greater than one hundred million dollars", "b) Only people with a college degree", "c) Everyone", "d)   Only adults over the age of 21"]}
 ];
 
- 
-
 
 function addQuestion(qN, animate){
-    
+    var q = 0
     question = $("<h1>"+questions[qN].prompt+"</h1>")
     question.attr("id", "question")
     if (animate == true){
@@ -24,10 +22,11 @@ function addQuestion(qN, animate){
     $("#question-box").append(question);
     if (animate == true){
         question.fadeIn(1000)};
-
     for (x of questions[qN].choices){
         div = $("<div></div>");
         div.attr("class", "text-box");
+        div.attr("id", q);
+        q ++;
         h2 = $('<h2>' + x + '</h2>');
         h2.attr("class", "response");
         div.append(h2);
@@ -39,17 +38,25 @@ function addQuestion(qN, animate){
     }
 }
 
-$(document).ready(function(){
-    addQuestion(currentQuestion, false)
-    $("#prev").click(function (){
-        $("#responses").empty()
+function nextQuestion(){
+    $("#responses").empty()
         $("#question-box").empty()
         currentQuestion ++;
         addQuestion(currentQuestion, true)
+}
 
-        
-    })
-    
+
+
+$(document).ready(function(){
+    addQuestion(currentQuestion, false);
+    $("#prev").click(function (){
+        nextQuestion();
+    });
+    $("body").on("click",".text-box", function(){
+        if (true){
+            $(this).animate({backgroundColor: "green"}, 1000, function(){
+                nextQuestion();
+            });
+        };
+    });
 });
-
-
