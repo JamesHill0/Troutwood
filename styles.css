@@ -1,0 +1,126 @@
+body {  
+  letter-spacing: 1px;
+  background-color: #f5fdfc !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0px;
+}
+
+#container{
+  box-shadow: 0px 0px 30px -5px;
+  background-color: white;
+  margin: auto;
+  margin-top: 100px;
+  width: 600px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 30px;
+  
+}
+
+#title{
+  font-size: larger;
+  /* background-color: green; */
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  color: #465a6a;
+
+}
+
+#question{
+  margin-top: 40px;
+  text-align: center;
+  font-size: 27px;
+  font-weight: 600;
+  color: #465a6a;
+  margin-bottom: 30px;
+
+}
+
+#responses{
+  margin-bottom: 50px;
+}
+
+
+
+.response{
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.text-box:hover{
+  background-color: #e4e4e4;
+}
+
+.text-box{
+  margin: 0 auto;
+  margin-bottom: 10px;
+  background-color: white;
+  border: solid 1px #465a6a;
+  width: 80%;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #465a6a;
+  padding-bottom: 8px;
+}
+
+
+#buttons-box {
+  /* display: inline; */
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+#prev {
+  border: solid 1px #1BBF8D;
+  background-color: #1BBF8D;
+  box-shadow: 0 7px 30px 0 rgba(23, 141, 108, 0.28);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  width: 150px;
+}
+
+#prev:hover {
+  background-color: #1cab83;
+  border: solid 1px #1cab83;
+  box-shadow: 0 7px 30px 0 rgba(28, 171, 131, 0.28);
+
+}
+
+
+#next {
+  border: solid 1px #1BBF8D;
+  background-color: #1BBF8D;
+  box-shadow: 0 7px 30px 0 rgba(23, 141, 108, 0.28);
+
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  width: 150px;
+  padding-bottom: 6px;
+}
+
+#next:hover{
+  background-color: #1cab83;
+  border: solid 1px #1cab83;
+  box-shadow: 0 7px 30px 0 rgba(28, 171, 131, 0.28);
+}
+
+
+.yeet{
+  color: red;
+}
