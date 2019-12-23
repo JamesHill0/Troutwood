@@ -2,7 +2,7 @@ var currentQuestion = 0
 var score = 0
 var answer = -1
 var questions = [
-    {prompt:"1) What is the S&P 500?", answer:0, choices:["Yes", "No"], answered:false, correct: null},
+    {prompt:"1) What is the S&P 500?", answer:0, choices:["500+ of the largest publicly traded companies in the U.S.", "Supersonic stealth drone fighter", "NASCAR race", "A newly discovered comet circling Neptune"], answered:false, correct: null},
     {prompt:"2) What should be the first line item in your budget?", answer:0, choices:["Savings", "Phone", "Food", "New shoes"], answered:false, correct: null},
     {prompt:"3) Which of these companies is in the S&P 500?", answer:0, choices:["Apple", "Stark Industries", "Initech", "Blue Star Airlines", "Monsters Incorporated"], answered:false, correct: null},
     {prompt:"4) Where is the safest place to keep your money (the least amount of risk)?", answer:1, choices:["Underneath your mattress", "Savings account", "Stock market", "Treasure chest on a remote island... with a map hidden behind a picture on your grandparent's wall."], answered:false, correct: null},
