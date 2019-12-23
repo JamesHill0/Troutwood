@@ -65,10 +65,19 @@ function updateProgressBar(){
     }
 }
 
-function scorePage(){
-    $("#responses-container").empty();
-    $("#prompt-container").empty();
-    response = $("<h1> You got" + score + "out of" + length(questions) + "points")
+function loadScorePage(){
+    var green = Math.round(255 * (score/questions.length));
+    var red = Math.round(255 - green);
+    console.log(red);
+    console.log(green);
+    $("body").empty();
+    scoreBox = $("<div></div>");
+    scoreBox.attr("id","score-box")
+    response = $("<h1>" + score + "/" + questions.length + "</h1>");
+    $(scoreBox).append(response);
+    $("body").append(scoreBox);
+    $(scoreBox).animate({color: "rgb(" + red + "," + green + ",0)"}, 1000, function(){});
+
 }
 
 function nextQuestion(){
@@ -76,21 +85,20 @@ function nextQuestion(){
     $("#prompt-container").empty(); // Empty prompt container
     currentQuestion ++;
     if (currentQuestion == questions.length){ // Go to score page condition
-        $("body").empty();
+        loadScorePage();
     }
     else if(currentQuestion == questions.length-1){
         addPrompt(currentQuestion, true); // Add the prompt  
         addResponses(currentQuestion, true); // Add the responses
         $("#buttons-box").empty();
         finishButton = $("<h2>Complete Quiz</h2>");
-        finishButton.attr("id", "finnish-button");
+        finishButton.attr("id", "finish-button");
         $("#buttons-box").append(finishButton);
     }
     else {
         addPrompt(currentQuestion, true); // Add the prompt  
         addResponses(currentQuestion, true); // Add the responses
     }
-    
 };
 
 function previousQuestion(){ 
@@ -116,6 +124,11 @@ $(document).ready(function(){ // Page load-up
     $("#prev").click(function (){ // Previous button working
         previousQuestion();
     });
+
+    $("body").on("click", "#finish-button", function () {
+        loadScorePage();
+    });
+
 
     $("body").on("click",".response-box", function(){ // Listener for clicking on prompts
         var correctAnswer = "#" + questions[currentQuestion].answer // Correct answer for checking user choice
