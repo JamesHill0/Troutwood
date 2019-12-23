@@ -137,7 +137,7 @@ body {
   box-shadow: 0 7px 30px 0 rgba(28, 171, 131, 0.28);
 }
 
-#finnish-button {
+#finish-button {
   border: solid 1px #1BBF8D;
   background-color: #1BBF8D;
   box-shadow: 0 7px 30px 0 rgba(23, 141, 108, 0.28);
@@ -152,10 +152,27 @@ body {
 
 }
 
-#finnish-button:hover{
+#finish-button:hover{
   background-color: #1cab83;
   border: solid 1px #1cab83;
   box-shadow: 0 7px 30px 0 rgba(28, 171, 131, 0.28);
 }
 
+#score-box{
+  font-size: 40px;
+  font-weight: 600;
+  color: #465a6a;
+  text-align: center;
+  box-shadow: 0px 0px 30px -5px;
+  background-color: white;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 200px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 30px;
+}
 
